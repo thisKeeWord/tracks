@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import { requestForegroundPermissionsAsync } from 'expo-location'
 import createDataContext from './createDataContext'
 import trackerApi from '../api/tracker'
 import { navigate } from '../navigationRef'
