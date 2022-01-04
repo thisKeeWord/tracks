@@ -14,7 +14,7 @@ const TrackCreateScreen = ({ isFocused }) => {
   const callback = useCallback((location) => {
     addLocation(location, state.recording)
   }, [state.recording])
-  const [err] = useLocation(isFocused, callback)
+  const [err] = useLocation(isFocused || state.recording, callback)
 
   return (
     <SafeAreaView forceInset={{ top: 'always' }}>
