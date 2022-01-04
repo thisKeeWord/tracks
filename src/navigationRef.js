@@ -1,6 +1,6 @@
 import { NavigationActions } from 'react-navigation'
 
-let switchNavigator
+let navigator
 
 export const setNavigator = (nav) => {
   navigator = nav

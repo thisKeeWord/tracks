@@ -8,8 +8,6 @@ import NavLink from '../components/NavLink'
 const SignupScreen = () => {
   const { state, signup, clearErrorMessage } = useContext(AuthContext)
 
-
-
   return (
     <View style={styles.container}>
       <NavigationEvents onWillFocus={clearErrorMessage} />
