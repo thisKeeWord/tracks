@@ -7,14 +7,21 @@ const Map = () => {
   const { state: { currentLocation, locations } } = useContext(LocationContext)
 
   if (!currentLocation) {
-    return <ActivityIndicator size="large" size={{ marginTop: 200 }} />
+    return <ActivityIndicator size="large" style={{ marginTop: 200 }} />
+  }
+
+
+  initialLocation = {
+    longitude: -122.0312186,
+    latitude: 37.33233141,
   }
 
   return (
     <MapView
       style={styles.map}
       initialRegion={{
-        ...currentLocation.coords,
+        // ...currentLocation.coords,
+        ...initialLocation,
         latitudeDelta: 0.01,
         longitudeDelta: 0.01
       }}
@@ -32,7 +39,7 @@ const Map = () => {
 
 const styles = StyleSheet.create({
   map: {
-    height: 300
+    height: 300,
   }
 })
 
